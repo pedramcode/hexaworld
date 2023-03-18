@@ -54,6 +54,14 @@ namespace game {
 //            y = y + dy;
 //        }
 
+        for (int y = -10; y < 10; y++) {
+            for (int x = -10; x < 10; x++) {
+                auto env = new Env(1, 2, 3);
+                auto *cell = new Cell(DEEP_SEA, _biome_to_texture(DEEP_SEA), sf::Vector2i(x, y), env);
+                _grid.push_back(cell);
+            }
+        }
+
         _paused = false;
     }
 
