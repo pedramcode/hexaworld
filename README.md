@@ -2,7 +2,7 @@
 
 * Minecraft too easy!
 * Terraria too limited!
-* Dwarffortress too complex!
+* Dwarffortress goddamn complex!
 
 After years of playing survival/strategic games, Hexaworld is my attempt to create an enjoyable game for gamers who love survival, strategic and roguelike games!
 
