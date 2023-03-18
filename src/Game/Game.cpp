@@ -34,8 +34,6 @@ namespace game {
     }
 
     Game::Game() {
-        srand(324);
-
         this->_window = new sf::RenderWindow();
         this->_window->create(sf::VideoMode(800, 600), "Game", sf::Style::Titlebar | sf::Style::Close);
         this->_window->setVerticalSyncEnabled(true);

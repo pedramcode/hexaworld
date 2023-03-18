@@ -10,6 +10,7 @@
 #include <map>
 #include <vector>
 #include "Cell/Cell.h"
+#include "Utils/PerlinNoise.hpp"
 #include <cmath>
 
 namespace game {

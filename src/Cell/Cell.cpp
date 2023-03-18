@@ -6,6 +6,10 @@
 
 namespace game {
     Env get_biome_env(BiomeType type) {
+        // height :
+        //  0 => Bottom of sea
+        //  5000 => Sea level
+        //  10,000 => Top of mountain
         switch (type) {
 
             case DEEP_SEA:
@@ -27,7 +31,7 @@ namespace game {
             case CANYON:
                 return Env(5, 10000, 80);
             case SNOWY:
-                return Env(10, 8000, 0);
+                return Env(10, 8000, 5);
             case GRASS_VILLAGE:
                 return Env(35, 6000, 25);
             case SNOW_VILLAGE:

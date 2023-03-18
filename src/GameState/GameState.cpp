@@ -54,10 +54,17 @@ namespace game {
 //            y = y + dy;
 //        }
 
-        for (int y = -10; y < 10; y++) {
-            for (int x = -10; x < 10; x++) {
-                auto env = new Env(1, 2, 3);
-                auto *cell = new Cell(DEEP_SEA, _biome_to_texture(DEEP_SEA), sf::Vector2i(x, y), env);
+        const siv::PerlinNoise::seed_type seed = 1234u;
+        const siv::PerlinNoise perlin{seed};
+
+        for (int y = -100; y < 100; y++) {
+            for (int x = -100; x < 100; x++) {
+                double hm = perlin.octave2D_01((x * 0.01), (y * 0.01), 4) * 100;
+                double ht = perlin.octave2D_01((x * 0.03), (y * 0.04), 4) * 10000;
+                double tm = perlin.octave2D_01((x * 0.06), (y * 0.02), 4) * 100;
+                auto env = new Env(hm, ht, tm);
+                auto selected_biome = _get_env_type(env);
+                auto *cell = new Cell(selected_biome, _biome_to_texture(selected_biome), sf::Vector2i(x, y), env);
                 _grid.push_back(cell);
             }
         }
