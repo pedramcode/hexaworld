@@ -13,47 +13,6 @@ namespace game {
         _size_view.x = win_size.x / 2;
         _size_view.y = win_size.y / 2;
 
-//        auto rnd_noise = [](double v, int range) -> double {
-//            int min = -range;
-//            int max = range;
-//            double randNum = rand() % (max - min + 1) + min;
-//            return v + randNum;
-//        };
-
-
-//        double hm = rand() % (100 - 0 + 1) + 0;
-//        double hg = rand() % (1000 - 0 + 1) + 0;
-//        double tm = rand() % (100 - 0 + 1) + 0;
-//
-//        int W = 200;
-//        int H = 200;
-//        int x = 0;
-//        int y = 0;
-//        int dx = 0;
-//        int dy = -1;
-
-        // Spiral loop
-        // pow should be MAX(W,H)
-//        for (int i = 0; i < pow(W, 2); i++) {
-//            if ((-W / 2 < x <= W / 2) && (-H / 2 < y <= H / 2)) {
-//                Cell *cell = nullptr;
-//                hm = rnd_noise(hm, 10);
-//                hg = rnd_noise(hg, 100);
-//                tm = rnd_noise(tm, 10);
-//                auto env = new Env(hm, hg, tm);
-//                auto selected_biome = _get_env_type(env);
-//                cell = new Cell(selected_biome, _biome_to_texture(selected_biome), sf::Vector2i(x, y), env);
-//                _grid.push_back(cell);
-//            }
-//            if (x == y || (x < 0 and x == -y) || (x > 0 and x == 1 - y)) {
-//                int tmp = dx;
-//                dx = -dy;
-//                dy = tmp;
-//            }
-//            x = x + dx;
-//            y = y + dy;
-//        }
-
         const siv::PerlinNoise::seed_type seed = 1234u;
         const siv::PerlinNoise perlin{seed};
 
